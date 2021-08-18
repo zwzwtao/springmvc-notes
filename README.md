@@ -1,2 +1,2 @@
 # springmvc-notes
-exploreing springmvc
+exploring springmvc
