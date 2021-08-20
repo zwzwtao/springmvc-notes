@@ -7,7 +7,7 @@
     <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
     <!-- 添加处理器适配器 -->
     <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
-    <!--视图解析器:DispatcherServlet给他的ModelAndView，他做了以下几件事
+    <!--视图解析器:就是DispatcherServlet给他的ModelAndView，他做了以下几件事
         1. 获取了ModelAndView的数据
         2. 解析ModelAndView的视图名字
         3. 拼接视图名字，找到对应的视图 /WEB-INF/jsp/
