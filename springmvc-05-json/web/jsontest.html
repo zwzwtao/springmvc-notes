@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSONTEST</title>
+    <!--<script>标签没有单闭合<script src="index.jsp"/>-->
+    <script type="text/javascript">
+        // 编写一个javascript对象 ES6可以使用let
+        var user = {
+            name: "中文名",
+            age: 3,
+            sex: "female"
+        };
+
+        console.log("======= json string =======");
+        var json = JSON.stringify(user);
+        console.log(json);
+        var obj = JSON.parse(json);
+        console.log("======= obj =======");
+        console.log(obj);
+        console.log("======= user =======");
+        console.log(user);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
