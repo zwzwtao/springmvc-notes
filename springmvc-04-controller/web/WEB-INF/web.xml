@@ -19,4 +19,31 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
+    <!-- 老办法是配置一个过滤器 -->
+<!--    <filter>-->
+<!--        <filter-name>encoding</filter-name>-->
+<!--        <filter-class>com.odas.filter.EncodingFilter</filter-class>-->
+<!--    </filter>-->
+<!--    <filter-mapping>-->
+<!--        <filter-name>encoding</filter-name>-->
+<!--        <url-pattern>/*</url-pattern>-->
+<!--    </filter-mapping>-->
+
+    <!-- 现在的话只要配置SpringMVC的乱码过滤就可以了 -->
+    <filter>
+        <filter-name>encoding</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>encoding</filter-name>
+        <!-- 注意这里要写/*而不是/ -->
+        <!-- /表示路径 -->
+        <!-- /*表示包括路径和文件，我们如果要请求/a.jsp这种静态文件的页面的话，需要用/* -->
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
 </web-app>
