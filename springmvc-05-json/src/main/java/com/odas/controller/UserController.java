@@ -28,7 +28,7 @@ public class UserController {
 //    @RequestMapping(value = "/json1", produces = "application/json;charset=utf-8")
     // 但是一般不需要用原生方法，只要统一在springmvc-servlet.xml配置好即可
     @RequestMapping("/json1")
-    // 下面语句只要用了@RestController就不需要写了
+    // 下面的这行@ResponseBody语句只要用了@RestController就不需要写了
 //    @ResponseBody  // 他就不会走视图解析器，会直接返回一个字符串
     public String json1() throws JsonProcessingException {
         // jackson, ObjectMapper
