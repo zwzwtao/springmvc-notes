@@ -10,8 +10,10 @@
           url : "${pageContext.request.contextPath}/a1",
           // data 必须以键值对(key:value)的形式定义
           data : {"name" : $("#username").val()},
-          success : function (data) {
-            alert(data);
+          success : function (data, status) {
+            console.log("data = " + data);
+            // 状态码 200 300 400 500，不过这里在console输出的是success这种的
+            console.log("status = " + status);
           },
           error : function () {
 
