@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>login</title>
+    <script src="${pageContext.request.contextPath}/static/js/jquery-3.6.0.js"></script>
     <script>
         function a1() {
             $.post({
@@ -16,7 +17,7 @@
         function a2() {
             $.post({
                 url : "${pageContext.request.contextPath}/a3",
-                data : {"name" : $("name").val()},
+                data : {"pwd" : $("pwd").val()},
                 success : function (data) {
                     console.log(data);
 
