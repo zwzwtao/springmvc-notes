@@ -40,4 +40,26 @@ public class AjaxController {
 
         return userList;
     }
+
+    @RequestMapping("/a3")
+    public String a3(String name, String pwd) {
+        String msg = "";
+        // 这里就不用数据库了，正式项目就是查询数据库来对一对
+        if (name != null) {
+            if ("admin".equals(name)) {
+                msg = "ok";
+            } else {
+                msg = "用户名有误";
+            }
+        }
+        if (pwd != null) {
+            // 这里也不用数据库
+            if ("123456".equals(pwd)) {
+                msg = "ok";
+            } else {
+                msg = "密码有误";
+            }
+        }
+        return msg;
+    }
 }
