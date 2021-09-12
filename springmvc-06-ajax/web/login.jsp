@@ -10,7 +10,10 @@
                 data : {"name" : $("#name").val()},
                 success : function (data) {
                     console.log(data);
-
+                    if (data.toString() === 'ok') {
+                        $("#userInfo").css("color", "aqua");
+                    }
+                    $("#userInfo").html(data);
                 }
             })
         }
@@ -20,7 +23,10 @@
                 data : {"pwd" : $("#pwd").val()},
                 success : function (data) {
                     console.log(data);
-
+                    if (data.toString() === 'ok') {
+                        $("#pwdInfo").css("color", "aqua");
+                    }
+                    $("#pwdInfo").html(data);
                 }
             })
         }
