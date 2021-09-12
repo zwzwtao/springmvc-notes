@@ -7,7 +7,7 @@
         function a1() {
             $.post({
                 url : "${pageContext.request.contextPath}/a3",
-                data : {"name" : $("name").val()},
+                data : {"name" : $("#name").val()},
                 success : function (data) {
                     console.log(data);
 
@@ -17,7 +17,7 @@
         function a2() {
             $.post({
                 url : "${pageContext.request.contextPath}/a3",
-                data : {"pwd" : $("pwd").val()},
+                data : {"pwd" : $("#pwd").val()},
                 success : function (data) {
                     console.log(data);
 
