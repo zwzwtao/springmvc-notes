@@ -53,4 +53,12 @@
         <property name="suffix" value=".jsp" />
     </bean>
 
+    <!-- 拦截器配置 -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path=""/>
+            <
+        </mvc:interceptor>
+    </mvc:interceptors>
+
 </beans>
