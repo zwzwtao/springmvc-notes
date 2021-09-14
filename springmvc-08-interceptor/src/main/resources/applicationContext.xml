@@ -53,7 +53,7 @@
         <property name="suffix" value=".jsp" />
     </bean>
 
-    <!-- 拦截器配置 -->
+    <!-- 拦截器配置, 这次我们用的是spring的拦截器，所以配置在applicationContext -->
     <!-- 我们可以说，拦截器是aop思想的一个运用 -->
     <mvc:interceptors>
         <mvc:interceptor>
@@ -62,6 +62,10 @@
             <!-- 如下/**就代表所有请求了 -->
             <mvc:mapping path="/**"/>
             <bean class="com.odas.config.MyInterceptor"/>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/user/**"/>
+            <bean class="com.odas.config.LoginInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>
 
