@@ -12,13 +12,13 @@ public class MyInterceptor implements HandlerInterceptor {
     // 如果return true 则执行下一个拦截器，放行的意思
     // 如果return false 则不执行下一个拦截器
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        System.out.println("=============== 处理前 ===============");
+        System.out.println("=============== preHandle 处理前 ===============");
 
         return true;
     }
 
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
-        System.out.println("=============== 处理前 ===============");
+        System.out.println("=============== postHandle 处理后 ===============");
     }
 
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {

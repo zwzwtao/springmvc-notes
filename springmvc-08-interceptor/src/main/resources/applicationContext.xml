@@ -56,8 +56,11 @@
     <!-- 拦截器配置 -->
     <mvc:interceptors>
         <mvc:interceptor>
-            <mvc:mapping path=""/>
-            <
+            <!-- 两个*代表包括这个请求下面的所有请求，就是递归包含 -->
+            <!-- 例如: /a1有效，/a1/a2这种a2是a1下面的请求也会生效 -->
+            <!-- 如下/**就代表所有请求了 -->
+            <mvc:mapping path="/**"/>
+            <bean class="com.odas.config.MyInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>
 
