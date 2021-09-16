@@ -32,7 +32,7 @@ public class FileController {
         if (!realPath.exists()){
             realPath.mkdir();
         }
-        System.out.println("path: " + path);
+        System.out.println("request.getServletContext(): " + request.getServletContext().getRealPath("/"));
         System.out.println("上传文件保存地址：" + realPath);
 
         InputStream is = file.getInputStream(); //文件输入流
