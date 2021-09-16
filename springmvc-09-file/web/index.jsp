@@ -10,5 +10,7 @@
   <input type="submit" value="提交上传">
 </form>
 
+<a href="">下载图片</a>
+
 </body>
 </html>
